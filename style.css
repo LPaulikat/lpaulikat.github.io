@@ -326,7 +326,9 @@
 
   /* HUNDE */
   #hunde { background: var(--black); color: var(--white); }
-  #hunde .section-sub { color: #666; }
+  #hunde .section-sub { 
+    color: #666; 
+  }
   .dogs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
