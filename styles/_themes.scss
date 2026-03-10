@@ -1,0 +1,64 @@
+section {
+  padding: 100px 0;
+}
+
+// Light (default) – red-dark für Akzente
+.section-label {
+  color: var(--red-dark);
+}
+
+.red-bar {
+  background: var(--red-dark);
+}
+
+// Dark – red für Akzente
+.section-dark {
+  background: var(--black);
+  color: var(--white);
+
+  .section-label {
+    color: var(--red);
+  }
+
+  .red-bar {
+    background: var(--red);
+  }
+
+  .section-sub {
+    color: #999;
+  }
+
+  .about-text p {
+    color: #aaa;
+  }
+
+  .highlight p {
+    color: #bbb;
+  }
+
+  .about-img-accent {
+    background: var(--red);
+  }
+
+  .highlight-dot {
+    background: var(--red);
+  }
+
+  .contact-icon svg {
+    color: var(--red);
+  }
+}
+
+// Gray – red-dark für Akzente
+.section-gray {
+  background: var(--gray);
+  color: var(--black);
+
+  .section-label {
+    color: var(--red-dark);
+  }
+
+  .red-bar {
+    background: var(--red-dark);
+  }
+}
