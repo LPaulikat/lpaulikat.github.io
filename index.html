@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rescue Dogs Schleswig-Flensburg e.V.</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="/nav.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rescue Dogs Schleswig-Flensburg e.V.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="/nav.js" defer></script>
 </head>
 <body>
 
@@ -21,13 +21,13 @@
       <span>Schleswig-Flensburg e.V.</span>
     </div>
   </a>
-  <button class="burger" id="burger">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <line x1="3" y1="6" x2="21" y2="6" stroke="#FAFAFA" stroke-width="2"/>
-    <line x1="3" y1="12" x2="21" y2="12" stroke="#FAFAFA" stroke-width="2"/>
-    <line x1="3" y1="18" x2="21" y2="18" stroke="#FAFAFA" stroke-width="2"/>
-  </svg>
-</button>
+  <button class="burger" id="burger" aria-label="Menü öffnen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="3" y1="6" x2="21" y2="6" stroke="#FAFAFA" stroke-width="2"/>
+      <line x1="3" y1="12" x2="21" y2="12" stroke="#FAFAFA" stroke-width="2"/>
+      <line x1="3" y1="18" x2="21" y2="18" stroke="#FAFAFA" stroke-width="2"/>
+    </svg>
+  </button>
   <ul class="nav-links" id="nav-links">
     <li><a href="#ueber">Über uns</a></li>
     <li><a href="#hunde">Unsere Hunde</a></li>
@@ -40,38 +40,39 @@
 <!-- HERO -->
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero-container">
-  <div class="hero-text">
-    <p class="hero-eyebrow">Rettungshundeverein Schleswig-Flensburg</p>
-    <h1 id="hero-title" class="hero-title">
-      RESCUE
-      <span class="red">DOGS</span>
-      E.V.
-    </h1>
-    <p class="hero-subtitle">Wir trainieren Hunde und Hundeführer für den Ernstfall – für die Suche und Rettung vermisster Menschen in schwierigem Gelände.</p>
-    <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
-      <a href="#ueber" class="btn btn-outline">Mehr erfahren</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="hero-stat-num">23</div>
-        <div class="hero-stat-label">Aktive Mitglieder</div>
+    <div class="hero-text">
+      <p class="hero-eyebrow">Rettungshundeverein</p>
+      <h1 id="hero-title" class="hero-title">
+        RESCUE
+        <span class="red">DOGS</span>
+        <br>
+        <span>Schleswig-Flensburg e.V.</span>
+      </h1>
+      <p class="hero-subtitle">Wir trainieren Hunde und Hundeführer für den Ernstfall – für die Suche und Rettung vermisster Menschen in schwierigem Gelände.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+        <a href="#ueber" class="btn btn-outline">Mehr erfahren</a>
       </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">14</div>
-        <div class="hero-stat-label">Ausgebildete Hunde</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">12</div>
-        <div class="hero-stat-label">Jahre aktiv</div>
-      </div>
-    </div>
-  </div>
-        <img class="hero-visual" src="public/gruppe.jpg" alt="Rescue Dogs Logo">
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">23</div>
+          <div class="hero-stat-label">Aktive Mitglieder</div>
         </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14</div>
+          <div class="hero-stat-label">Ausgebildete Hunde</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">12</div>
+          <div class="hero-stat-label">Jahre aktiv</div>
+        </div>
+      </div>
+    </div>
+    <img class="hero-visual" src="/public/gruppe.jpg" alt="Rescue Dogs Team">
+  </div>
 </section>
 
-<!-- ÜBER UNS -->
+<!-- ÜBER UNS – helle section → red-dark -->
 <section id="ueber">
   <div class="container">
     <p class="section-label">Wer wir sind</p>
@@ -79,7 +80,9 @@
     <div class="red-bar"></div>
     <div class="about-grid">
       <div class="about-image-stack">
-        <div class="about-img-main">🐕</div>
+        <div class="about-img-main">
+          <img src="/public/gruppe.jpg" alt="Vereinsfoto">
+        </div>
         <div class="about-img-accent">
           <div class="accent-text">SEIT<br>2013</div>
         </div>
@@ -111,8 +114,8 @@
   </div>
 </section>
 
-<!-- HUNDE -->
-<section id="hunde">
+<!-- HUNDE – dunkle section → red -->
+<section id="hunde" class="section-dark">
   <div class="container">
     <p class="section-label">Unsere Vierbeiner</p>
     <h2 class="section-title">DIE HUNDE</h2>
@@ -121,7 +124,7 @@
     <div class="dogs-grid">
       <div class="dog-card">
         <div class="dog-card-img">
-          <img src="/public/Pete-suche.jpg" alt="">
+          <img src="/public/Pete-suche.jpg" alt="Rex bei der Flächensuche">
         </div>
         <div class="dog-card-body">
           <span class="dog-badge">Flächensuche</span>
@@ -132,7 +135,7 @@
       </div>
       <div class="dog-card">
         <div class="dog-card-img">
-          <img src="/public/Ulrike.jpg" alt="">
+          <img src="/public/Ulrike.jpg" alt="Luna">
         </div>
         <div class="dog-card-body">
           <span class="dog-badge">Flächensuche</span>
@@ -143,7 +146,7 @@
       </div>
       <div class="dog-card">
         <div class="dog-card-img">
-          <img src="/public/Charly.jpg" alt="">
+          <img src="/public/Charly.jpg" alt="Finn in Ausbildung">
         </div>
         <div class="dog-card-body">
           <span class="dog-badge">In Ausbildung</span>
@@ -156,33 +159,38 @@
   </div>
 </section>
 
-<!-- GALERIE -->
-<section id="galerie">
+<!-- GALERIE – graue section → red-dark -->
+<section id="galerie" class="section-gray">
   <div class="container">
     <p class="section-label">Eindrücke</p>
     <h2 class="section-title">GALERIE</h2>
     <div class="red-bar"></div>
     <div class="gallery-grid">
       <div class="gallery-item">
-     <img src="/public/Jette.jpg" alt="">
+        <img src="/public/Jette.jpg" alt="">
+        <div class="gallery-overlay"><span class="overlay-plus">+</span></div>
       </div>
       <div class="gallery-item">
         <img src="/public/Watson.jpg" alt="">
+        <div class="gallery-overlay"><span class="overlay-plus">+</span></div>
       </div>
       <div class="gallery-item">
         <img src="/public/Cooper.jpg" alt="">
+        <div class="gallery-overlay"><span class="overlay-plus">+</span></div>
       </div>
       <div class="gallery-item">
         <img src="/public/Oscar.jpg" alt="">
+        <div class="gallery-overlay"><span class="overlay-plus">+</span></div>
       </div>
       <div class="gallery-item">
         <img src="/public/Fox.jpg" alt="">
+        <div class="gallery-overlay"><span class="overlay-plus">+</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TERMINE -->
+<!-- TERMINE – helle section → red-dark -->
 <section id="termine">
   <div class="container">
     <p class="section-label">Aktuell</p>
@@ -237,8 +245,8 @@
   </div>
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt">
+<!-- KONTAKT – dunkle section → red -->
+<section id="kontakt" class="section-dark">
   <div class="container">
     <p class="section-label">Erreich uns</p>
     <h2 class="section-title">KONTAKT</h2>
@@ -246,22 +254,26 @@
     <div class="contact-grid">
       <div class="contact-card">
         <div class="contact-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+          </svg>
         </div>
-        <span class="sr-only">E-Mail</span>
-        <span>info@rescuedogs-sl-fl.de</span>
+        <div>
+          <span class="sr-only">E-Mail</span>
+          <span>info@rescuedogs-sl-fl.de</span>
+        </div>
       </div>
       <div class="contact-card">
         <div class="contact-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
-</svg>     
-</div>
-        <span class="sr-only">Telefon</span>
-        <span>+49 461 123 456 78</span>
-      </div>  
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="28" height="28">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+          </svg>
+        </div>
+        <div>
+          <span class="sr-only">Telefon</span>
+          <span>+49 461 123 456 78</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
