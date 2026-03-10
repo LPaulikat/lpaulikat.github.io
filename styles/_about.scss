@@ -1,0 +1,33 @@
+.about-grid {
+  display: grid;
+  gap: 80px;
+  margin-top: 64px;
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 5;
+}
+
+.about-text {
+  h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 14px;
+  }
+}
+
+

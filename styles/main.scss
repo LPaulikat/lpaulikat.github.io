@@ -1,0 +1,19 @@
+// ── Variablen & Reset ──────────────────────
+@use 'variables';
+@use 'base';
+
+// ── Section Themes ─────────────────────────
+@use 'themes';
+
+// ── Shared Utilities ───────────────────────
+@use 'shared';
+
+// ── Komponenten ────────────────────────────
+@use 'nav';
+@use 'hero';
+@use 'about';
+@use 'dogs';
+@use 'galerie';
+@use 'appointments';
+@use 'contact';
+@use 'footer';
