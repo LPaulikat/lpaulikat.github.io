@@ -1,3 +1,36 @@
+<script setup lang="ts"></script>
+
+<template>
+    <header>
+        <nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-circle">
+      <img src="../assets/images/Logo.jpg" alt="Logo">
+    </div>
+    <div class="nav-brand">
+      Rescue Dogs
+      <span>Schleswig-Flensburg e.V.</span>
+    </div>
+  </a>
+  <button class="burger" id="burger" aria-label="Menü öffnen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="3" y1="6" x2="21" y2="6" stroke="#FAFAFA" stroke-width="2"/>
+      <line x1="3" y1="12" x2="21" y2="12" stroke="#FAFAFA" stroke-width="2"/>
+      <line x1="3" y1="18" x2="21" y2="18" stroke="#FAFAFA" stroke-width="2"/>
+    </svg>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#dogs">Unsere Hunde</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="#appointments">Termine</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
+    </header>
+</template>
+
+<style scoped>
 nav {
   position: fixed;
   top: 0;
@@ -77,7 +110,6 @@ nav {
   }
 }
 
-// Burger
 .burger {
   display: none;
   background: none;
@@ -127,3 +159,5 @@ nav {
     }
   }
 }
+
+</style>

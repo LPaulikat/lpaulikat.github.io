@@ -1,3 +1,45 @@
+<script setup lang="ts"></script>
+
+
+<template>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-container">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Rettungshundeverein</p>
+      <h1 id="hero-title" class="hero-title">
+        RESCUE
+        <span class="red">DOGS</span>
+        <br>
+        <span>Schleswig-Flensburg e.V.</span>
+      </h1>
+      <p class="hero-subtitle">Wir trainieren Hunde und Hundeführer für den Ernstfall – für die Suche und Rettung vermisster Menschen in schwierigem Gelände.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
+        <a href="#about" class="btn btn-outline">Mehr erfahren</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">23</div>
+          <div class="hero-stat-label">Aktive Mitglieder</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14</div>
+          <div class="hero-stat-label">Ausgebildete Hunde</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">12</div>
+          <div class="hero-stat-label">Jahre aktiv</div>
+        </div>
+      </div>
+    </div>
+    <img class="hero-visual" src="../assets/images/gruppe.jpg" alt="Rescue Dogs Team">
+  </div>
+</section>
+
+</template>
+
+
+<style>
 .hero {
   background: var(--black);
 }
@@ -132,3 +174,5 @@
   max-height: 50vh;
   object-fit: cover;
 }
+
+</style>

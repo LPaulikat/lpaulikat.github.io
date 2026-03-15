@@ -1,3 +1,12 @@
+:root {
+  --red: #ff2b2b;
+  --red-dark: #C50707;
+  --black: #0C0F11;
+  --white: #FDFFFC;
+  --gray: #e7e7e7;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -43,3 +52,41 @@ li{
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section-label {
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1;
+}
+
+.red-bar {
+  width: 60px;
+  height: 4px;
+  margin: 16px 0 32px;
+}
+
+.section-sub {
+  font-family: 'Source Serif 4', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.7;
+  max-width: 560px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+

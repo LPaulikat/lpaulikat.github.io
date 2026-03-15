@@ -1,3 +1,25 @@
+<script setup lang="ts"></script>
+
+<template>
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        Rescue Dogs
+        <span>Schleswig-Flensburg e.V. · Gegründet 2013</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#">Impressum</a></li>
+        <li><a href="#">Datenschutz</a></li>
+        <li><a href="#">Satzung</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 Rescue Dogs Schleswig-Flensburg e.V.</div>
+    </div>
+  </div>
+</footer>
+</template>
+
+<style scoped>
 footer {
   background: #0a0a0a;
   border-top: 3px solid var(--red);
@@ -53,3 +75,5 @@ footer {
   font-size: 12px;
   color: var(--gray);
 }
+
+</style>
