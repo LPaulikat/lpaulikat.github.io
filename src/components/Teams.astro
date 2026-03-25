@@ -1,0 +1,106 @@
+---
+import data from "../teams.json";
+---
+
+<section id="dogs" class="section-dark">
+    <div class="container">
+        <p class="section-label">Unsere Teams</p>
+        <h2 class="section-title">Die Teams</h2>
+        <div class="red-bar"></div>
+        <p class="section-sub">
+            Jeder unserer Hunde ist ein unverzichtbarer Teil des Teams –
+            hochspezialisiert, zuverlässig und unermüdlich im Einsatz.
+        </p>
+        <div class="dogs-grid">
+            {
+                data.map((team) => (
+                    <div class="dog-card">
+                        <img
+                            class="dog-card-img"
+                            src={team.img.src}
+                            alt={team.img.alt}
+                        />
+                        <div class="dog-card-body">
+                            <span class="dog-badge">{team.badge}</span>
+                            <div class="dog-name">{team.name}</div>
+                            <div class="dog-breed">{team.breed}</div>
+                            <p class="dog-desc">{team.description}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .dogs-grid {
+        display: grid;
+        gap: 2rem;
+
+        @media screen and (min-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .dog-card {
+            overflow: clip;
+            cursor: pointer;
+            position: relative;
+
+            .dog-card-img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 3/5;
+                object-fit: cover;
+                @media (width > 1024px) {
+                    aspect-ratio: 4/5;
+                }
+            }
+
+            .dog-card-body {
+                background-color: hsl(from var(--black) h s l / 0.8);
+                position: absolute;
+                padding: 1.25rem;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            @media (width > 1024px) {
+                .dog-card-body {
+                    bottom: -100%;
+                    background-color: hsl(from var(--black) h s l / 0.8);
+                    z-index: 1;
+                    transition: bottom 0.5s ease-in-out;
+                }
+            }
+
+            .dog-badge {
+                display: inline-block;
+                width: fit-content;
+                background: var(--red-dark);
+                color: var(--white);
+                font-size: 0.75rem;
+                letter-spacing: 0.5ch;
+                text-transform: uppercase;
+                padding: 0.25rem 0.75rem;
+                font-weight: 500;
+            }
+            .dog-name {
+                font-family: "Saira", sans-serif;
+                font-size: 1.75rem;
+            }
+            .dog-breed,
+            .dog-desc {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                .dog-card-body {
+                    bottom: 0;
+                }
+            }
+        }
+    }
+</style>

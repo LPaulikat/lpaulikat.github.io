@@ -1,0 +1,36 @@
+[
+  {
+    "img": {
+      "src": "/images/Stand.jpg",
+      "alt": "Stand bei einer Veranstaltung"
+    },
+    "title": "Rettung ist unser Auftrag",
+    "texts": [
+      "Der Rescue Dogs Schleswig-Flensburg e.V. ist ein gemeinnütziger Verein, der sich der Ausbildung von Rettungshundeteams widmet. Im Einsatz arbeiten wir eng mit Behörden und Rettungsdiensten zusammen.",
+      "Unsere Teams sind rund um die Uhr einsatzbereit und können innerhalb kürzester Zeit ausrücken – ob bei der Suche nach vermissten Personen im Wald, in Trümmerlagen oder bei Großschadenslagen."
+    ],
+    "list": [
+      "Regelmäßige Übungen und Lehrgänge auf Landes- und Bundesebene",
+      "Prüfungen nach BRH-Standard (Bundesverband Rettungshunde)",
+      "Enge Zusammenarbeit mit Feuerwehr, Polizei und DRK",
+      "Offen für neue Mitglieder – auch ohne Vorkenntnisse"
+    ]
+  },
+  {
+    "img": {
+      "src": "/images/Stand.jpg",
+      "alt": "Stand bei einer Veranstaltung"
+    },
+    "title": "Rettung ist unser Auftrag",
+    "texts": [
+      "Der Rescue Dogs Schleswig-Flensburg e.V. ist ein gemeinnütziger Verein, der sich der Ausbildung von Rettungshundeteams widmet. Im Einsatz arbeiten wir eng mit Behörden und Rettungsdiensten zusammen.",
+      "Unsere Teams sind rund um die Uhr einsatzbereit und können innerhalb kürzester Zeit ausrücken – ob bei der Suche nach vermissten Personen im Wald, in Trümmerlagen oder bei Großschadenslagen."
+    ],
+    "list": [
+      "Regelmäßige Übungen und Lehrgänge auf Landes- und Bundesebene",
+      "Prüfungen nach BRH-Standard (Bundesverband Rettungshunde)",
+      "Enge Zusammenarbeit mit Feuerwehr, Polizei und DRK",
+      "Offen für neue Mitglieder – auch ohne Vorkenntnisse"
+    ]
+  }
+]

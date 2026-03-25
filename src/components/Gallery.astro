@@ -1,0 +1,67 @@
+---
+import data from "../gallery.json";
+---
+
+<section id="galerie" class="section-dark">
+    <div class="container">
+        <p class="section-label">Eindrücke</p>
+        <h2 class="section-title">GALERIE</h2>
+        <div class="red-bar"></div>
+        <div class="gallery-grid">
+            {
+                data.map((item, index) => (
+                    <div class={`gallery-item${index >= 9 ? " hidden" : ""}`}>
+                        <a href={item.img.src} class="glightbox">
+                            <img src={item.img.src} alt={item.img.alt} />
+                        </a>
+                    </div>
+                ))
+            }
+        </div>
+        <button id="load-more" class="btn btn-outline">Mehr anzeigen</button>
+    </div>
+</section>
+
+<script>
+    const btn = document.getElementById("load-more");
+    const hidden = document.querySelectorAll(".gallery-item.hidden");
+    let shown = 0;
+
+    btn?.addEventListener("click", () => {
+        const next = Array.from(hidden).slice(shown, shown + 9);
+        next.forEach((el) => el.classList.remove("hidden"));
+        shown += 9;
+        if (shown >= hidden.length) {
+            btn.style.display = "none";
+        }
+    });
+</script>
+
+<style>
+    .gallery-grid {
+        columns: 400px;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        .gallery-item {
+            margin-bottom: 0.25rem;
+            &.hidden {
+                display: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+    .btn {
+        margin-inline: auto;
+    }
+</style>

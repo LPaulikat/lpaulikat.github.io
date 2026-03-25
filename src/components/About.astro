@@ -1,0 +1,71 @@
+---
+import data from "../about.json";
+---
+
+<section id="about">
+    <div class="container">
+        <p class="section-label">Wer wir sind</p>
+        <h2 class="section-title">ÜBER DEN VEREIN</h2>
+        <div class="red-bar"></div>
+        <div class="about-grid">
+            {
+                data.map((about) => (
+                    <div class="about-content">
+                        {about.img.src && (
+                            <img
+                                class="about-img"
+                                src={about.img.src}
+                                alt={about.img.alt}
+                            />
+                        )}
+                        <div class="about-text">
+                            <h3>{about.title}</h3>
+
+                            {about.texts.map((text) => (
+                                <p>{text}</p>
+                            ))}
+                            <ul>
+                                {about.list.map((listItem) => (
+                                    <li>{listItem}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-grid {
+        display: grid;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        @media (width > 1024px) {
+            gap: 5rem;
+            margin-top: 4rem;
+        }
+        .about-content {
+            display: flex;
+            gap: 2.5rem;
+            flex-direction: column;
+
+            @media (width > 1024px) {
+                flex-direction: row;
+
+                &:nth-child(even) {
+                    flex-direction: row-reverse;
+                }
+            }
+
+            .about-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                aspect-ratio: 4 / 5;
+            }
+        }
+    }
+</style>

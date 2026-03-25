@@ -1,0 +1,22 @@
+[
+  {
+    "img": {
+      "src": "/images/teams/Edel-Holly.jpg",
+      "alt": "Das Team Edel und Holly als Welpe."
+    },
+    "badge": "Rente",
+    "name": "Holly und Edel",
+    "breed": "Golden Retriever - 12 Jahre",
+    "description": "Holly ist nach 12 Jahren Rettungsarbeit im März 2026 in Rente gegangen."
+  },
+  {
+    "img": {
+      "src": "/images/teams/Edel-Jette.jpg",
+      "alt": "Das Team Edel und Jette"
+    },
+    "badge": "Flächensuche",
+    "name": "Edel und Jette",
+    "breed": "Border Collie - 5 Jahre",
+    "description": "Edel und Jette sind ein eingespieltes Team auch wenn Jette eigentlich Tanjas Hündin ist. Im August 2025 haben die beiden ihre Prüfung erfolgreich abgelegt und sind seitdem einsatzbereit."
+  }
+]
