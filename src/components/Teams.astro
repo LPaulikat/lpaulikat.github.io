@@ -50,12 +50,14 @@ import data from "../teams.json";
         .card {
             display: grid;
             overflow: clip;
-            box-shadow: 2xp 2px 20px var(--black);
+
             .card-img {
                 width: 100%;
                 height: auto;
                 aspect-ratio: 3/6;
                 object-fit: cover;
+                object-position: top center;
+
                 grid-column: 1/-1;
                 grid-row: 1/-1;
                 border-radius: 15px;

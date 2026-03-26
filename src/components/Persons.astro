@@ -2,29 +2,21 @@
 import data from "../persons.json";
 ---
 
-<section id="persons">
+<section id="persons" class="section-dark">
     <div class="container">
-        <p class="section-label">Das sind wir</p>
+        <p class="section-label">Wer steckt dahinter</p>
         <h2 class="section-title">Die Menschen</h2>
         <div class="red-bar"></div>
-        <p class="section-sub">
-            Jeder unserer Hunde ist ein unverzichtbarer Teil des Teams –
-            hochspezialisiert, zuverlässig und unermüdlich im Einsatz.
-        </p>
+        <p class="section-sub">Das sind die Menschen hinter dem Verein</p>
         <div class="person-grid">
             {
                 data.map((team) => (
                     <div class="card">
-                        <img
-                            class="card-img"
-                            src={team.images[0].img.src}
-                            alt={team.images[0].img.alt}
-                        />
-                        <div class="card-body">
-                            <span class="card-badge">{team.badge}</span>
-                            <div class="card-name">{team.name}</div>
-                            <div class="card-breed">{team.breed}</div>
-                            <p class="card-desc">{team.description}</p>
+                        <span class="card__badge">{team.badge}</span>
+                        <img class="card__img" src={team.images[0].img.src} alt={team.images[0].img.alt} />
+                        <div class="card__body">
+                            <h2 class="card__name">{team.name}</h2>
+                            <p class="card__desc">{team.description}</p>
                         </div>
                     </div>
                 ))
@@ -34,71 +26,56 @@ import data from "../persons.json";
 </section>
 
 <style>
-    .dogs-grid {
+    .person-grid {
         display: grid;
         gap: 2rem;
-
-        @media screen and (min-width: 1024px) {
+        grid-template-rows: auto 500px auto auto;
+        @media (width > 1024px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .dog-card {
-            overflow: clip;
-            cursor: pointer;
+        .card {
+            display: grid;
+            gap: 0;
             position: relative;
-
-            .dog-card-img {
+            grid-row: span 4;
+            grid-template-rows: subgrid;
+            .card__img {
+                border-top-right-radius: 15px;
                 width: 100%;
-                height: auto;
-                aspect-ratio: 3/5;
+                height: 100%;
                 object-fit: cover;
-                @media (width > 1024px) {
-                    aspect-ratio: 4/5;
-                }
+                object-position: top center;
             }
 
-            .dog-card-body {
-                background-color: hsl(from var(--black) h s l / 0.8);
-                position: absolute;
-                padding: 1.25rem;
-                bottom: 0;
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-            }
-
-            @media (width > 1024px) {
-                .dog-card-body {
-                    bottom: -100%;
-                    background-color: hsl(from var(--black) h s l / 0.8);
-                    z-index: 1;
-                    transition: bottom 0.5s ease-in-out;
-                }
-            }
-
-            .dog-badge {
+            .card__badge {
                 display: inline-block;
                 width: fit-content;
                 background: var(--red-dark);
                 color: var(--white);
-                font-size: 0.75rem;
+                font-size: 1rem;
                 letter-spacing: 0.5ch;
                 text-transform: uppercase;
                 padding: 0.25rem 0.75rem;
                 font-weight: 500;
-            }
-            .dog-name {
-                font-family: "Saira", sans-serif;
-                font-size: 1.75rem;
-            }
-            .dog-breed,
-            .dog-desc {
-                font-size: 1rem;
+                border-top-left-radius: 15px;
+                /*border-top-right-radius: 15px;*/
             }
 
-            &:hover {
-                .dog-card-body {
-                    bottom: 0;
+            .card__body {
+                display: flex;
+                flex-direction: column;
+                color: var(--white);
+                background: var(--dark-gray);
+                padding: 1rem;
+                gap: 0.5rem;
+                .card__name {
+                    font-family: "Saira", sans-serif;
+                    font-size: 1.75rem;
+                }
+
+                .card__desc {
+                    font-size: 1rem;
                 }
             }
         }
