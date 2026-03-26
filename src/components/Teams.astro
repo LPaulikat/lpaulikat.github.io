@@ -2,34 +2,33 @@
 import data from "../teams.json";
 ---
 
-<section id="teams" class="section-dark">
+<section id="teams">
     <div class="container">
         <p class="section-label">Unsere Teams</p>
         <h2 class="section-title">Die Teams</h2>
         <div class="red-bar"></div>
         <p class="section-sub">
-            Jeder unserer Hunde ist ein unverzichtbarer Teil des Teams –
-            hochspezialisiert, zuverlässig und unermüdlich im Einsatz.
+            Jeder unserer Hunde ist ein unverzichtbarer Teil des Teams – hochspezialisiert, zuverlässig und unermüdlich
+            im Einsatz.
         </p>
         <ul class="team-grid">
             {
                 data.map((team) => (
                     <li>
                         <article class="card">
-                            <img
-                                class="card-img"
-                                src={team.images[0]?.img.src}
-                                alt={team.images[0]?.img.alt}
-                            />
+                            <img class="card-img" src={team.images[0]?.img.src} alt={team.images[0]?.img.alt} />
                             <div class="card-body">
                                 <span class="badge">{team.badge}</span>
+
                                 <h3 class="name">
-                                    <a href={`/teams/${team.id}`}>
-                                        {team.name}
-                                    </a>
+                                    <a href={`/teams/${team.id}`}>{team.name}</a>
                                 </h3>
-                                <div class="breed">{team.breed}</div>
-                                <p class="desc">{team.description}</p>
+                                <div class="info">
+                                    <div class="info-inner ">
+                                        <p class="breed">{team.breed}</p>
+                                        <p class="desc">{team.description}</p>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </li>
@@ -44,20 +43,22 @@ import data from "../teams.json";
         display: grid;
         gap: 2rem;
         list-style: none;
-        @media screen and (min-width: 1024px) {
+        @media (width > 1024px) {
             grid-template-columns: repeat(3, 1fr);
         }
 
         .card {
+            display: grid;
             overflow: clip;
-            cursor: pointer;
-            position: relative;
-
+            box-shadow: 2xp 2px 20px var(--black);
             .card-img {
                 width: 100%;
                 height: auto;
-                aspect-ratio: 3/5;
+                aspect-ratio: 3/6;
                 object-fit: cover;
+                grid-column: 1/-1;
+                grid-row: 1/-1;
+                border-radius: 15px;
                 @media (width > 1024px) {
                     aspect-ratio: 4/5;
                 }
@@ -77,47 +78,76 @@ import data from "../teams.json";
             }
 
             .card-body {
-                background-color: hsl(from var(--black) h s l / 0.8);
-                position: absolute;
-                padding: 1.25rem;
-                bottom: 0;
+                --border-width: 2px;
+                grid-column: 1/-1;
+                grid-row: 1/-1;
+                align-self: end;
+                position: relative;
+                color: var(--white);
+                padding: 1rem;
+                background-color: var(--black);
                 display: flex;
                 flex-direction: column;
                 gap: 0.75rem;
-            }
-
-            @media (width > 1024px) {
-                .card-body {
-                    bottom: -100%;
-                    background-color: hsl(from var(--black) h s l / 0.8);
-                    z-index: 1;
-                    transition: bottom 0.5s ease-in-out;
-                }
+                z-index: 1;
+                border-top-right-radius: 15px;
+                border-top: var(--border-width) solid var(--red);
+                border-right: var(--border-width) solid var(--red);
             }
 
             .badge {
-                display: inline-block;
+                position: absolute;
+                top: -36px;
+                left: 0;
                 width: fit-content;
-                background: var(--red-dark);
+                background-color: var(--black);
+                border-top-right-radius: 15px;
                 color: var(--white);
-                font-size: 0.75rem;
-                letter-spacing: 0.5ch;
+                font-size: 1rem;
+                letter-spacing: 0.25ch;
                 text-transform: uppercase;
-                padding: 0.25rem 0.75rem;
+                padding: 0.5rem 1rem;
                 font-weight: 500;
+                border-top: var(--border-width) solid var(--red);
+                border-right: var(--border-width) solid var(--red);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: var(--border-width);
+                    left: 100%;
+                    width: 1rem;
+                    height: 1rem;
+                    border-top-right-radius: 50%;
+                    box-shadow: 4px -4px 0 4px var(--black);
+                    border-top: var(--border-width) solid var(--red);
+                    border-right: var(--border-width) solid var(--red);
+                    rotate: 180deg;
+                }
             }
             .name {
                 font-family: "Saira", sans-serif;
                 font-size: 1.75rem;
             }
-            .breed,
-            .desc {
-                font-size: 1rem;
+            .info {
+                display: grid;
+
+                @media (width > 1024px) {
+                    grid-template-rows: 0fr;
+                    transition: grid-template-rows 0.5s ease;
+                }
+            }
+
+            .info-inner {
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
             }
 
             &:hover {
-                .card-body {
-                    bottom: 0;
+                .info {
+                    grid-template-rows: 1fr;
                 }
             }
         }

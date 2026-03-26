@@ -11,13 +11,7 @@ import data from "../about.json";
             {
                 data.map((about) => (
                     <div class="about-content">
-                        {about.img.src && (
-                            <img
-                                class="about-img"
-                                src={about.img.src}
-                                alt={about.img.alt}
-                            />
-                        )}
+                        {about.img.src && <img class="about-img" src={about.img.src} alt={about.img.alt} />}
                         <div class="about-text">
                             <h3>{about.title}</h3>
 
@@ -64,7 +58,8 @@ import data from "../about.json";
                 width: 100%;
                 height: auto;
                 object-fit: cover;
-                aspect-ratio: 4 / 5;
+                aspect-ratio: 4 / 3;
+                border-radius: 15px;
             }
         }
     }
