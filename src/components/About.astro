@@ -13,9 +13,9 @@ interface Props {
         list: {
             listLabel: string;
             listItems: {
-              bold:string;
-              text:string;
-              }[];
+                bold: string;
+                text: string;
+            }[];
         }[];
     }[];
 }
@@ -39,14 +39,21 @@ const { data, label, heading } = Astro.props;
                                 {about.texts.map((text) => (
                                     <p>{text}</p>
                                 ))}
-                                {about.list.map((l) =>
-                                {l.listLabel && <strong>{l.listLabel}</strong>}
-                                <ul>
-                                    {l.listItems.map((item) => (
-                                        <li>{item.bold && <strong>{item.bold}</strong>}{item.text}</li>
-                                    ))}
-                                </ul>
-                                )}
+                                {about.list.map((l) => (
+                                    <>
+                                        {l.listLabel && <strong>{l.listLabel}</strong>}
+                                        {l.listItems && (
+                                            <ul>
+                                                {l.listItems.map((item) => (
+                                                    <li>
+                                                        {item.bold && <strong>{item.bold}</strong>}
+                                                        {item.text}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </>
+                                ))}
                             </div>
                         </div>
                     ))
