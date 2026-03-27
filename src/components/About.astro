@@ -40,7 +40,7 @@ const { data, label, heading } = Astro.props;
                                     <p>{text}</p>
                                 ))}
                                 {about.list.map((l) =>
-                                <strong>{l.listLabel}</strong>
+                                {l.listLabel && <strong>{l.listLabel}</strong>}
                                 <ul>
                                     {l.listItems.map((item) => (
                                         <li>{item.bold && <strong>{item.bold}</strong>}{item.text}</li>
