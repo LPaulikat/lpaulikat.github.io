@@ -6,13 +6,17 @@ import Persons from "../components/Persons.astro";
 import Teams from "../components/Teams.astro";
 import Gallery from "../components/Gallery.astro";
 import Contact from "../components/Contact.astro";
+import aboutData from "../data/about.json";
+import teamData from "../data/teams.json";
+import galleryData from "../data/gallery.json";
+import personDdata from "../data/persons.json";
 ---
 
 <Layout>
     <Hero />
-    <About />
-    <Persons />
-    <Teams />
-    <Gallery />
+    <About {...aboutData} />
+    <Persons {...personDdata} />
+    <Teams {...teamData} />
+    <Gallery {...galleryData} />
     <Contact />
 </Layout>

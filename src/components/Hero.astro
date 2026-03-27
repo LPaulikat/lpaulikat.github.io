@@ -1,13 +1,15 @@
 <section class="section-dark" aria-labelledby="hero-title">
     <div class="hero-container">
         <div class="hero-text">
-            <p class="section-label">Rettungshundeverein</p>
-            <h1 id="hero-title" class="hero-title">
-                RESCUE
-                <span class="red">DOGS</span>
-                <br />
-                <span>Schleswig-Flensburg e.V.</span>
-            </h1>
+            <div class="hero-headline">
+                <p class="section-label">Rettungshundeverein</p>
+                <h1 id="hero-title" class="hero-title">
+                    RESCUE
+                    <span class="red">DOGS</span>
+                    <br />
+                    <span>Schleswig-Flensburg e.V.</span>
+                </h1>
+            </div>
             <p class="section-sub">
                 Der Verein Rescue Dogs Schleswig-Flensburg e.V. widmet sich der Ausbildung und dem Einsatz von
                 Rettungshundeteams zur Suche nach vermissten Personen. Grundlage bildet der Ausbildungsstandard der <strong
@@ -38,18 +40,20 @@
             padding-inline: 5rem;
             padding-block: 8rem;
         }
-        .section-label {
-            color: var(--red);
-            margin-bottom: -1rem;
+        .hero-headline {
+            .section-label {
+                color: var(--red);
+            }
         }
     }
 
     .hero-text {
         display: grid;
-        gap: 2rem;
+        gap: 3rem;
 
         .section-sub {
             max-width: 47rem;
+            margin: 0;
         }
     }
 
@@ -65,38 +69,9 @@
         flex-wrap: wrap;
     }
 
-    /*.hero-stats {
-        display: flex;
-        gap: 1.5rem;
-        flex-direction: column;
-        padding-top: 2rem;
-
-        @media (width> 1024px) {
-            margin-top: 3rem;
-            flex-direction: row;
-            border-top: 1px solid #2a2a2a;
-        }
-    }*/
-
-    /*.hero-stat-num {
-        font-family: "Saira", sans-serif;
-        font-size: 2.5rem;
-        color: var(--red);
-        line-height: 1;
-    }
-
-    .hero-stat-label {
-        font-size: 1rem;
-        color: var(--gray);
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        margin-top: 0.25rem;
-    }*/
-
     .hero-visual {
         width: 100%;
         border-radius: 15px;
-
         object-fit: contain;
     }
 </style>

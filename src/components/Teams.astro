@@ -1,38 +1,56 @@
 ---
-import data from "../teams.json";
+interface Props {
+    label: string;
+    heading: string;
+    text: string;
+    data: {
+        id: string;
+        images: {
+            img: {
+                src: string;
+                alt: string;
+            };
+        }[];
+        badge: string;
+        name: string;
+        breed: string;
+        description: string;
+    }[];
+}
+const { data, label, heading, text } = Astro.props;
 ---
 
 <section id="teams">
     <div class="container">
-        <p class="section-label">Unsere Teams</p>
-        <h2 class="section-title">Die Teams</h2>
-        <div class="red-bar"></div>
+        <p class="section-label">{label}</p>
+        <h2 class="section-title">{heading}</h2>
+        {heading && <div class="red-bar" />}
         <p class="section-sub">
-            Jeder unserer Hunde ist ein unverzichtbarer Teil des Teams – hochspezialisiert, zuverlässig und unermüdlich
-            im Einsatz.
+            {text}
         </p>
         <ul class="team-grid">
             {
-                data.map((team) => (
-                    <li>
-                        <article class="card">
-                            <img class="card-img" src={team.images[0]?.img.src} alt={team.images[0]?.img.alt} />
-                            <div class="card-body">
-                                <span class="badge">{team.badge}</span>
+                data &&
+                    data.map((team) => (
+                        <li>
+                            <article class="card">
+                                <img class="card-img" src={team.images[0]?.img.src} alt={team.images[0]?.img.alt} />
+                                <div class="card-body">
+                                    <span class="badge">{team.badge}</span>
 
-                                <h3 class="name">
-                                    <a href={`/teams/${team.id}`}>{team.name}</a>
-                                </h3>
-                                <div class="info">
-                                    <div class="info-inner ">
-                                        <p class="breed">{team.breed}</p>
-                                        <p class="desc">{team.description}</p>
+                                    <h3 class="name">
+                                        <a href={`/teams/${team.id}`}>{team.name}</a>
+                                    </h3>
+                                    <div class="info">
+                                        <div class="info-inner ">
+                                            <p class="breed">{team.breed}</p>
+                                            <p class="desc">{team.description}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </article>
-                    </li>
-                ))
+                            </article>
+                        </li>
+                    ))
             }
         </ul>
     </div>

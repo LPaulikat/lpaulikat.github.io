@@ -1,31 +1,55 @@
 ---
-import data from "../about.json";
+interface Props {
+    label: string;
+    heading: string;
+    data: {
+        id: string;
+        img: {
+            src: string;
+            alt: string;
+        };
+        title: string;
+        texts: string[];
+        list: {
+            listLabel: string;
+            listItems: {
+              bold:string;
+              text:string;
+              }[];
+        }[];
+    }[];
+}
+const { data, label, heading } = Astro.props;
 ---
 
 <section id="about">
     <div class="container">
-        <p class="section-label">Wer wir sind</p>
-        <h2 class="section-title">ÜBER DEN VEREIN</h2>
-        <div class="red-bar"></div>
+        <p class="section-label">{label}</p>
+        <h2 class="section-title">{heading}</h2>
+        {heading && <div class="red-bar" />}
         <div class="about-grid">
             {
-                data.map((about) => (
-                    <div class="about-content">
-                        {about.img.src && <img class="about-img" src={about.img.src} alt={about.img.alt} />}
-                        <div class="about-text">
-                            <h3>{about.title}</h3>
+                data &&
+                    data.map((about) => (
+                        <div class="about-content">
+                            {about.img.src && <img class="about-img" src={about.img.src} alt={about.img.alt} />}
+                            <div class="about-text">
+                                <h3>{about.title}</h3>
 
-                            {about.texts.map((text) => (
-                                <p>{text}</p>
-                            ))}
-                            <ul>
-                                {about.list.map((listItem) => (
-                                    <li>{listItem}</li>
+                                {about.texts.map((text) => (
+                                    <p>{text}</p>
                                 ))}
-                            </ul>
+                                {about.list.map((l) =>
+                                <strong>{l.listLabel}</strong>
+                                <ul>
+                                    {l.listItems.map((item) => (
+                                        <li>{item.bold && <strong>{item.bold}</strong>}{item.text}</li>
+                                    ))}
+                                </ul>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))
+                    ))
             }
         </div>
     </div>
@@ -35,11 +59,9 @@ import data from "../about.json";
     .about-grid {
         display: grid;
         gap: 2rem;
-        margin-top: 2rem;
 
         @media (width > 1024px) {
             gap: 5rem;
-            margin-top: 4rem;
         }
         .about-content {
             display: flex;
@@ -60,6 +82,12 @@ import data from "../about.json";
                 object-fit: cover;
                 aspect-ratio: 4 / 3;
                 border-radius: 15px;
+            }
+            .about-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5em;
+                max-width: 50%;
             }
         }
     }

@@ -1,11 +1,21 @@
 ---
-import data from "../gallery.json";
+interface Props {
+    label: string;
+    heading: string;
+    data: {
+        img: {
+            src: string;
+            alt: string;
+        };
+    }[];
+}
+const { data, label, heading } = Astro.props;
 ---
 
 <section id="galerie" class="section-dark">
     <div class="container">
-        <p class="section-label">Eindrücke</p>
-        <h2 class="section-title">GALERIE</h2>
+        <p class="section-label">{label}</p>
+        <h2 class="section-title">{heading}</h2>
         <div class="red-bar"></div>
         <div class="gallery-grid">
             {

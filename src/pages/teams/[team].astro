@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import data from "../../teams.json";
+import { data } from "../../teams.json";
 export function getStaticPaths() {
     return data.map((team) => ({
         params: {
@@ -22,11 +22,7 @@ const teamData = data.find((t) => t.id === team);
                     teamData?.images.map((i) => (
                         <li>
                             <a href={i.img.src} class="glightbox">
-                                <img
-                                    class="team-img"
-                                    src={i.img.src}
-                                    alt={i.img.alt}
-                                />
+                                <img class="team-img" src={i.img.src} alt={i.img.alt} />
                             </a>
                         </li>
                     ))
@@ -41,7 +37,7 @@ const teamData = data.find((t) => t.id === team);
     }
     .team-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 2rem;
         list-style: none;
 
@@ -49,6 +45,7 @@ const teamData = data.find((t) => t.id === team);
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 15px;
         }
     }
 </style>

@@ -1,0 +1,26 @@
+[
+  {
+    "href": "#about",
+    "title": "Verein"
+  },
+  {
+    "href": "#persons",
+    "title": "Über Uns"
+  },
+  {
+    "href": "#teams",
+    "title": "Unsere Teams"
+  },
+  {
+    "href": "#galerie",
+    "title": "Galerie"
+  },
+  {
+    "href": "/mitgliedschaft",
+    "title": "Mitgliedschaft"
+  },
+  {
+    "href": "#contact",
+    "title": "Kontakt"
+  }
+]

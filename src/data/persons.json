@@ -1,0 +1,35 @@
+{
+  "label": "Wer steckt dahinter",
+  "heading": "Die Menschen",
+  "text": "Das sind die Menschen hinter dem Verein",
+  "data": [
+    {
+      "id": "1",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Edel-Holly.jpg",
+            "alt": "Edel."
+          }
+        }
+      ],
+      "badge": "Trainerin",
+      "name": "Edel",
+      "description": "Edel ist von Anfang an dabei, sie ist eine der Gründerinnen des Vereins, Trainerin und 2. Vorsitzende"
+    },
+    {
+      "id": "2",
+      "images": [
+        {
+          "img": {
+            "src": "/images/persons/Tanja.jpg",
+            "alt": "Tanja."
+          }
+        }
+      ],
+      "badge": "Trainerin",
+      "name": "Tanja",
+      "description": "Tanja ist eine Trainerin"
+    }
+  ]
+}

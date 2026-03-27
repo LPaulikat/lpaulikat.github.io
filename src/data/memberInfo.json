@@ -1,0 +1,28 @@
+{
+  "label": "Interesse",
+  "heading": "Mitgliedschaft",
+  "data": [
+    {
+      "id": "1",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "Mitgliedschaft & Einstieg",
+      "texts": [
+        "Pesonen mit Interesse an der Rettungshundearbeit können zunächst unverbindlich an 5 Probetrainings teilnehmen. Danach entscheidet der Verein über eine sechsmonatige Probezeit, in der Hund und Hundeführer intensiv ausgebildet und betreut werden.",
+        "Nach Ablauf der Probezeit wird gemeinsam über eine feste Mitgliedschaft entschieden. Die finale Enscheidung trifft der Vorstand, wobei das Miteinander im Team so wichtig ist, dass alle Mitglieder ein Mitspracherecht haben."
+      ],
+      "list": [
+        {
+          "listLabel": "Mietgliedsbeitrag:",
+          "listItems": [
+            { "bold": "", "text": " 120 € Jährlich" },
+            { "bold": "", "text": " 60 € Jährlich als Helfer ohne Hund" },
+            { "bold": "", "text": " Bei Eintritt im laufenden Jahr wird Anteilig ab dem Beitrittsmonat berechnet" }
+          ]
+        }
+      ]
+    }
+  ]
+}
