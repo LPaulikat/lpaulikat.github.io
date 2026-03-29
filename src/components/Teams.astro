@@ -5,6 +5,7 @@ interface Props {
     text: string;
     data: {
         id: string;
+        role: string;
         images: {
             img: {
                 src: string;
@@ -32,12 +33,12 @@ const { data, label, heading, text } = Astro.props;
             {
                 data &&
                     data.map((team) => (
-                        <li>
-                            <article class="card">
+                        <li class="team-item">
+                            {team.role && <span class="role">{team.role}</span>}
+                            <article class={`card ${team.role ? "has-role" : ""}`}>
                                 <img class="card-img" src={team.images[0]?.img.src} alt={team.images[0]?.img.alt} />
                                 <div class="card-body">
                                     <span class="badge">{team.badge}</span>
-
                                     <h3 class="name">
                                         <a href={`/teams/${team.id}`}>{team.name}</a>
                                     </h3>
@@ -64,110 +65,137 @@ const { data, label, heading, text } = Astro.props;
         @media (width > 1024px) {
             grid-template-columns: repeat(3, 1fr);
         }
+        .team-item {
+            position: relative;
 
-        .card {
-            display: grid;
-            overflow: clip;
-
-            .card-img {
-                width: 100%;
-                height: auto;
-                aspect-ratio: 3/6;
-                object-fit: cover;
-                object-position: top center;
-
-                grid-column: 1/-1;
-                grid-row: 1/-1;
-                border-radius: 15px;
-                @media (width > 1024px) {
-                    aspect-ratio: 4/5;
-                }
-            }
-            h3 {
-                a {
-                    color: var(--white);
-                    text-decoration: none;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        z-index: 1;
-                        top: -100vh;
-                    }
-                }
-            }
-
-            .card-body {
-                --border-width: 2px;
-                grid-column: 1/-1;
-                grid-row: 1/-1;
-                align-self: end;
-                position: relative;
-                color: var(--white);
-                padding: 1rem;
-                background-color: var(--black);
-                display: flex;
-                flex-direction: column;
-                gap: 0.75rem;
-                z-index: 1;
-                border-top-right-radius: 15px;
-                border-top: var(--border-width) solid var(--red);
-                border-right: var(--border-width) solid var(--red);
-            }
-
-            .badge {
+            .role {
+                display: block;
+                top: -1.75rem;
+                right: 0;
                 position: absolute;
-                top: -36px;
-                left: 0;
                 width: fit-content;
-                background-color: var(--black);
-                border-top-right-radius: 15px;
+                background: var(--red-dark);
                 color: var(--white);
                 font-size: 1rem;
-                letter-spacing: 0.25ch;
+                letter-spacing: 0.5ch;
                 text-transform: uppercase;
-                padding: 0.5rem 1rem;
+                padding: 0.25rem 0.75rem;
                 font-weight: 500;
-                border-top: var(--border-width) solid var(--red);
-                border-right: var(--border-width) solid var(--red);
+                border-top-right-radius: 15px;
+                border-top-left-radius: 15px;
+            }
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    bottom: var(--border-width);
-                    left: 100%;
-                    width: 1rem;
-                    height: 1rem;
-                    border-top-right-radius: 50%;
-                    box-shadow: 4px -4px 0 4px var(--black);
-                    border-top: var(--border-width) solid var(--red);
-                    border-right: var(--border-width) solid var(--red);
-                    rotate: 180deg;
-                }
-            }
-            .name {
-                font-family: "Saira", sans-serif;
-                font-size: 1.75rem;
-            }
-            .info {
+            .card {
                 display: grid;
+                overflow: clip;
 
-                @media (width > 1024px) {
-                    grid-template-rows: 0fr;
-                    transition: grid-template-rows 0.5s ease;
+                &.has-role {
+                    .card-img {
+                        border-top-right-radius: 0px;
+                    }
                 }
-            }
 
-            .info-inner {
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
+                .card-img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 3/6;
+                    object-fit: cover;
+                    object-position: top center;
+                    grid-column: 1/-1;
+                    grid-row: 1/-1;
+                    border-radius: 15px;
+                    @media (width > 1024px) {
+                        aspect-ratio: 4/5;
+                    }
+                }
+                h3 {
+                    a {
+                        color: var(--white);
+                        text-decoration: none;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            inset: 0;
+                            z-index: 1;
+                            top: -100vh;
+                        }
+                    }
+                }
 
-            &:hover {
+                .card-body {
+                    --schadow-width: 2px;
+                    grid-column: 1/-1;
+                    grid-row: 1/-1;
+                    align-self: end;
+                    position: relative;
+                    color: var(--white);
+                    padding: 1rem;
+                    background-color: var(--black);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    z-index: 1;
+                    border-top-right-radius: 15px;
+                    border-top: 3px solid red;
+                    border-right: 3px solid red;
+                }
+
+                .badge {
+                    position: absolute;
+                    bottom: 100%;
+                    left: 0;
+                    width: fit-content;
+                    background-color: var(--black);
+                    border-top-right-radius: 15px;
+                    color: var(--white);
+                    font-size: 1rem;
+                    letter-spacing: 0.25ch;
+                    text-transform: uppercase;
+                    padding: 0.5rem 1rem;
+                    font-weight: 500;
+                    border-top: 3px solid var(--red);
+                    border-right: 3px solid var(--red);
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 1rem;
+                        aspect-ratio: 1;
+                        left: 100%;
+                        bottom: 0;
+                        background-image: radial-gradient(
+                            circle at 100% 100%,
+                            transparent 15px,
+                            var(--red) 15px,
+                            var(--red) 18px,
+                            var(--black) 18px
+                        );
+                        rotate: 270deg;
+                    }
+                }
+                .name {
+                    font-family: "Saira", sans-serif;
+                    font-size: 1.75rem;
+                }
                 .info {
-                    grid-template-rows: 1fr;
+                    display: grid;
+
+                    @media (width > 1024px) {
+                        grid-template-rows: 0fr;
+                        transition: grid-template-rows 0.5s ease;
+                    }
+                }
+
+                .info-inner {
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+
+                &:hover {
+                    .info {
+                        grid-template-rows: 1fr;
+                    }
                 }
             }
         }

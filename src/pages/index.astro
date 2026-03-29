@@ -2,20 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
-import Persons from "../components/Persons.astro";
 import Teams from "../components/Teams.astro";
 import Gallery from "../components/Gallery.astro";
 import Contact from "../components/Contact.astro";
 import aboutData from "../data/about.json";
 import teamData from "../data/teams.json";
 import galleryData from "../data/gallery.json";
-import personDdata from "../data/persons.json";
 ---
 
 <Layout>
     <Hero />
     <About {...aboutData} />
-    <Persons {...personDdata} />
     <Teams {...teamData} />
     <Gallery {...galleryData} />
     <Contact />

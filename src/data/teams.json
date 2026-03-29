@@ -5,6 +5,7 @@
   "data": [
     {
       "id": "1",
+      "role": "Trainerin",
       "images": [
         {
           "img": {
@@ -26,6 +27,7 @@
     },
     {
       "id": "2",
+      "role": "Trainerin",
       "images": [
         {
           "img": {
@@ -47,6 +49,7 @@
     },
     {
       "id": "3",
+      "role": "",
       "images": [
         {
           "img": {
@@ -62,6 +65,7 @@
     },
     {
       "id": "4",
+      "role": "",
       "images": [
         {
           "img": {
