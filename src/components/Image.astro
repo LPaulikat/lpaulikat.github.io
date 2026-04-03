@@ -1,0 +1,53 @@
+---
+interface Props {
+    images: {
+        src: string;
+        alt: string;
+        size: string;
+    }[];
+}
+const { images } = Astro.props;
+---
+
+<section class="section-dark">
+    <div class="container">
+        <div class="img__collage">
+            {images.map((img) => <img class={img.size} src={img.src} alt="" />)}
+        </div>
+    </div>
+</section>
+
+<style>
+    .img__collage {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @media (width > 768px) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(6, 1fr);
+
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+
+            .wide {
+                grid-column: span 2;
+            }
+            .tall {
+                grid-row: span 2;
+            }
+            .big {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            /* top to bottm than left to right */
+        }
+    }
+</style>
