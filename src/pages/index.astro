@@ -8,10 +8,11 @@ import Contact from "../components/Contact.astro";
 import aboutData from "../data/about.json";
 import teamData from "../data/teams.json";
 import galleryData from "../data/gallery.json";
+import heroData from "../data/hero.json";
 ---
 
 <Layout>
-    <Hero />
+    <Hero {...heroData} />
     <About {...aboutData} />
     <Teams {...teamData} />
     <Gallery {...galleryData} />

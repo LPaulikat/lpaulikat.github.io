@@ -1,41 +1,65 @@
+---
+
+interface Props {
+    label: string;
+    heading: { title: string; red: string; titleEnd: string };
+    text: string;
+    cta: {
+         href: string; title: string; variant: string; target: string;
+    }[];
+    images: {
+        src: string;
+        alt: string;
+    }[];
+}
+const { label, heading, text, cta, images } = Astro.props;
+---
+
 <section class="section-dark" aria-labelledby="hero-title">
     <div class="hero-container">
         <div class="hero-text">
             <div class="hero-headline">
-                <p class="section-label">Rettungshundeverein</p>
+                <p class="section-label">{label}</p>
                 <h1 id="hero-title" class="hero-title">
-                    RESCUE
-                    <span class="red">DOGS</span>
+                    {heading.title}
+                    <span class="red"> {heading.red} </span>
                     <br />
-                    <span>Schleswig-Flensburg e.V.</span>
+                    <span> {heading.titleEnd} </span>
                 </h1>
             </div>
-            <p class="section-sub">
-                Der Verein Rescue Dogs Schleswig-Flensburg e.V. widmet sich der Ausbildung und dem Einsatz von
-                Rettungshundeteams zur Suche nach vermissten Personen. Grundlage bildet der Ausbildungsstandard der <strong
-                    >Interessengemeinschaft Rettungshunde (IGR).</strong
-                >
-                Wir verfolgen ausschließlich und unmittelbar gemeinnützige Zwecke.
-            </p>
+            <p class="section-sub" set:html={text} />
+
+
+            {cta &&
             <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
-                <a href="#about" class="btn btn-outline">Mehr erfahren</a>
+                { cta.map((link)=>
+                <a href={link.href} class=`btn ${link.variant}` >{link.title}</a>
+                )}
             </div>
+            }
         </div>
-        <img class="hero-visual" src="/images/collage.jpg" alt="Eine Collage von Bildern mit Hunden" />
+        <div class="hero-collage">
+            {
+                images.map((img, i) => (
+                    <div class="collage-item" style={`--i: ${i}`}>
+                        <img src={img.src} alt={img.alt} />
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </section>
 
 <style>
     .hero-container {
         display: grid;
-        gap: 1.5rem;
+        column-gap: 1.5rem;
+        row-gap: 6rem;
         max-width: 1920px;
         margin: 0 auto;
         padding-block: 4rem;
         padding-inline: 1rem;
-
-        @media (width> 1024px) {
+        @media (width > 1024px) {
             grid-template-columns: 1fr 1fr;
             padding-inline: 5rem;
             padding-block: 8rem;
@@ -46,32 +70,104 @@
             }
         }
     }
-
     .hero-text {
         display: grid;
         gap: 3rem;
-
         .section-sub {
             max-width: 47rem;
             margin: 0;
         }
     }
-
     .hero-title {
+        text-transform: uppercase;
+        span {
+            &:last-child {
+                text-transform: none;
+            }
+        }
         .red {
             color: var(--red);
         }
     }
-
     .hero-cta {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
     }
+    .hero-collage {
+        position: relative;
+              aspect-ratio: 4/3;
+    }
+    .collage-item {
+        position: absolute;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        animation:
+            fadeInCollage 0.6s ease forwards,
+            float 5s ease-in-out forwards;
+        animation-delay: calc(var(--i) * 0.10s), calc(var(--i) * 0.5s);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        &:nth-child(1) {
+            --r: -3deg;
+                width: 60%;
+                aspect-ratio: 1;
+                top: -10%;
+                left: 3%;
+        }
+        &:nth-child(2) {
+            --r: 2deg;
+                width: 48%;
+                aspect-ratio: 4/3;
+                top: 5%;
+                right: 0;
+        }
+        &:nth-child(3) {
+            --r: 2deg;
+                width: 42%;
+                aspect-ratio: 1;
+                top: 40%;
+                left: 0;
+        }
+        &:nth-child(4) {
+            --r: -3deg;
+                width: 55%;
+                aspect-ratio: 4/3;
+                bottom: 0;
+                right: 2%;
+        }
+        &:nth-child(5) {
+            --r: 5deg;
+                width: 32%;
+                aspect-ratio: 1;
+                bottom: 23%;
+                left: 30%;
 
-    .hero-visual {
-        width: 100%;
-        border-radius: 15px;
-        object-fit: contain;
+        }
+    }
+    @keyframes fadeInCollage {
+        from {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95) rotate(var(--r, 0deg));
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotate(var(--r, 0deg));
+        }
+    }
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0px) rotate(var(--r, 0deg));
+        }
+        50% {
+            transform: translateY(-10px) rotate(var(--r, 0deg));
+        }
     }
 </style>

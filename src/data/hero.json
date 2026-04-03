@@ -1,0 +1,30 @@
+{
+  "label": "Rettungshundeverein",
+  "heading": {
+    "title": "Rescue",
+    "red": "Dogs",
+    "titleEnd": "Schleswig-Flensburg e.V."
+  },
+  "text": "Der Verein Rescue Dogs Schleswig-Flensburg e.V. widmet sich der Ausbildung und dem Einsatz von Rettungshundeteams zur Suche nach vermissten Personen. Grundlage bildet der Ausbildungsstandard der <strong> Interessengemeinschaft Rettungshunde (IGR).</strong> Wir verfolgen ausschließlich und unmittelbar gemeinnützige Zwecke.",
+  "cta": [
+    {
+      "href": "#contact",
+      "title": "Kontakt aufnehmen",
+      "variant": "btn-primary",
+      "target": ""
+    },
+    {
+      "href": "#about",
+      "title": "Mehr erfahren",
+      "variant": "btn-outline",
+      "target": ""
+    }
+  ],
+  "images": [
+    { "src": "/images/dogs/Holly.jpg", "alt": "" },
+    { "src": "/images/dogs/Watson.jpg", "alt": "" },
+    { "src": "/images/dogs/Peet.jpg", "alt": "" },
+    { "src": "/images/dogs/Annie.jpg", "alt": "" },
+    { "src": "/images/dogs/Fox.jpg", "alt": "" }
+  ]
+}
