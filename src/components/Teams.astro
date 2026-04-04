@@ -63,7 +63,7 @@ const { data, label, heading, text } = Astro.props;
         gap: 2rem;
         list-style: none;
 
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
 
         .team-item {
             position: relative;
