@@ -60,7 +60,8 @@ const { data, label, heading, text } = Astro.props;
 <style>
     .team-grid {
         display: grid;
-        gap: 2rem;
+        column-gap: 2rem;
+        row-gap: 4rem;
         list-style: none;
 
         grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));

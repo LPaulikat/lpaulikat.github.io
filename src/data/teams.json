@@ -49,6 +49,38 @@
     },
     {
       "id": "3",
+      "role": "Trainerin",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Simone-Neo.jpg",
+            "alt": "Das Team Simone und Neo."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Simone und Neo",
+      "breed": " - 5 Jahre",
+      "description": "Simone und Neo sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+    },
+    {
+      "id": "4",
+      "role": "Trainerin",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Tanja-Peet.jpg",
+            "alt": "Das Team Tanja und Peet."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Tanja und Peet",
+      "breed": "Border Collie - 5 Jahre",
+      "description": "Tanja und Peet sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+    },
+    {
+      "id": "5",
       "role": "",
       "images": [
         {
@@ -64,7 +96,7 @@
       "description": "Annika und Oskar sind seit mehreren Jahren bei den Rescue Dogs und seit November 2022 sind sie ein Einsatgeprüftes Team"
     },
     {
-      "id": "4",
+      "id": "6",
       "role": "",
       "images": [
         {
@@ -78,6 +110,71 @@
       "name": "Wiebke und Annie",
       "breed": "Border Collie - 5 Jahre",
       "description": "Wiebke und Annie sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+    },
+    {
+      "id": "7",
+      "role": "",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Ulrike-Shiva.jpg",
+            "alt": "Das Team Ulrike und Shiva."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Ulrike und Shiva",
+      "breed": "Malinois - 6 Jahre",
+      "description": "Ulrike und Shiva sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+    },
+
+    {
+      "id": "8",
+      "role": "",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Lisa-Cooper.jpg",
+            "alt": "Das Team Lisa und Cooper."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Lisa und Cooper",
+      "breed": "Australian Shepherd - 6 Jahre",
+      "description": "Lisa und Cooper sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+    },
+    {
+      "id": "9",
+      "role": "",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Lars-Fox.jpg",
+            "alt": "Das Team Lars und Fox."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Lars und Fox",
+      "breed": "Australian Shepherd - 2 Jahre",
+      "description": "Lars und Fox sind seit 1 1/2 Jahren bei den Rescue Dogs das Team hat ende März die Vorprüfung bestanden."
+    },
+    {
+      "id": "10",
+      "role": "",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Thomas-Merlin.jpg",
+            "alt": "Das Team Thomas und Merlin."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Thomas und Merlin",
+      "breed": "Australian Shepherd - 6 Jahre",
+      "description": "Thomas und Merlin sind seit 1 1/2 Jahren bei den Rescue Dogs und sind aktuell in der Vorprüfung"
     }
   ]
 }
