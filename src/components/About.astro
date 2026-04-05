@@ -53,8 +53,11 @@ const { data, label, heading } = Astro.props;
                                             <ul>
                                                 {l.listItems.map((item) => (
                                                     <li>
-                                                        {item.bold && <strong>{item.bold}</strong>}
-                                                      <p>{item.text}</p>
+                                                        <div class="list-item">
+                                                            {item.bold && <strong>{item.bold}</strong>}
+                                                          <p>{item.text}</p>
+                                                        </div>
+
                                                     </li>
                                                 ))}
                                             </ul>
@@ -104,6 +107,16 @@ const { data, label, heading } = Astro.props;
                 gap: 1.5em;
                 @media (width > 1024px) {
                     max-width: 75%;
+                }
+
+                .list-item{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    gap: 0.5ch;
+                    @media (width> 1024px) {
+                        flex-wrap: nowrap;
+                    }
                 }
             }
         }
