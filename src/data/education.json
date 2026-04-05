@@ -16,6 +16,7 @@
       "list": [
         {
           "listLabel": "",
+          "text": "",
           "listItems": [{ "bold": "", "text": "Rettungshundestaffel-Nord e.V." }]
         }
       ]
@@ -31,6 +32,7 @@
       "list": [
         {
           "listLabel": "",
+          "text": "",
           "listItems": [
             { "bold": "", "text": "Gültiger Impfnachweis des Hundes" },
             { "bold": "", "text": "Nachweis einer Haftpflichtversicherung" },
@@ -38,6 +40,98 @@
             { "bold": "", "text": "Wesenstest des Hundes (vereinsintern)" },
             { "bold": "", "text": "Teilnahme an einem 10-km-Fitnesstest (vereinsintern)" }
           ]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "Ausbildung und Prüfung",
+      "texts": [
+        "Die Ausbildung zum einsatzfähigen Rettungshundeteams (Hund + Hundeführer) dauert in der Regel mehrere Jahre und gliedert sich in folgende Phasen:",
+        "<strong>1. Vorprüfung</strong>",
+        "Ziel: Festellung des Grundgehorsamkeit und Fähigkeit zur Personensuche"
+      ],
+      "list": [
+        {
+          "listLabel": "Teil 1: Unterordnung",
+          "text": "Der Hund muss sich führig zeigen, sowohl angeleint als auch frei. Geprüft werden u.a.:",
+          "listItems": [
+            { "bold": "", "text": "Normalschritt, Langsamschritt, Laufschritt" },
+            { "bold": "", "text": "Wendungen (recht, links, kehrt)" },
+            { "bold": "", "text": "Verhalten in der Personengruppe" },
+            { "bold": "", "text": "Reaktion auf Hör- und Sichtzeichen" },
+            { "bold": "", "text": "Rückruf aus Entfernung" },
+            { "bold": "", "text": "Begegnung mit angeleinten Hunden" }
+          ]
+        },
+        {
+          "listLabel": "Teil 2: Suche",
+          "text": "",
+          "listItems": [
+            { "bold": "", "text": "Gebiet ca. 15000 m², möglichst fremd" },
+            { "bold": "", "text": "Aufgabe: Innerhalb von 15 Minuten eine fremde Person finden und anzeigen" },
+            {
+              "bold": "",
+              "text": "Der Hundeführer muss sich orientieren können, gefundene VP sicher auf der Karte einzeichnen können und Einsatzkräfte korrekt Einweisen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "",
+      "texts": ["<strong>2. Einsatzfähigkeitsprüfung</strong>", "Ziel: Nachweis der vollständigen Einsatzfähigkeit"],
+      "list": [
+        {
+          "listLabel": "Teil 1: Unterordnung (siehe oben)",
+          "text": "",
+          "listItems": []
+        },
+        {
+          "listLabel": "Teil 2: Suche",
+          "text": "",
+          "listItems": [
+            { "bold": "", "text": "Gebiet ca. 20000 m², möglichst fremd" },
+            { "bold": "", "text": "Anzahl der zu suchenden Personen ist unbekannt" },
+            { "bold": "", "text": "Suchzeit: mind. 30 Minuten + 15 Minuten Pause" },
+            { "bold": "", "text": "Das abgesuchte Gebiet muss auf einer Karte bennant und eingezeichnet werden" },
+            {
+              "bold": "",
+              "text": "Der Hundeführer muss sich orientieren können, gefundene VP sicher auf der Karte einzeichnen können und Einsatzkräfte korrekt Einweisen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "",
+      "texts": [
+        "<strong>Wichtig:</strong> Die Prüfung muss alle zwei Jahre wiederholt werden, um die Einsatztauglichkeit zu erhalten."
+      ],
+      "list": [
+        {
+          "listLabel": "",
+          "text": "",
+          "listItems": []
+        },
+        {
+          "listLabel": "",
+          "text": "",
+          "listItems": []
         }
       ]
     }

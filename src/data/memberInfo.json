@@ -16,6 +16,7 @@
       "list": [
         {
           "listLabel": "Mietgliedsbeitrag:",
+          "text": "",
           "listItems": [
             { "bold": "", "text": " 120 € Jährlich" },
             { "bold": "", "text": " 60 € Jährlich als Helfer ohne Hund" },
@@ -38,6 +39,7 @@
       "list": [
         {
           "listLabel": "Trainingsbetrieb:",
+          "text": "",
           "listItems": [
             { "bold": "Sommer:", "text": "freitags ab 16:00 Uhr bis in die Abendstunden." },
             { "bold": "Herbst/Winter:", "text": "samstags ab 10:00 Uhr" }

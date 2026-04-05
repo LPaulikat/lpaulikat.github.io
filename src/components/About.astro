@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets';
+
 interface Props {
     label: string;
     heading: string;
@@ -12,6 +14,7 @@ interface Props {
         texts: string[];
         list: {
             listLabel: string;
+            text:string;
             listItems: {
                 bold: string;
                 text: string;
@@ -34,13 +37,17 @@ const { data, label, heading } = Astro.props;
                         <div class=`about-content ${about.img.src && 'hasImg'}` >
                             {about.img.src && <img class="about-img" src={about.img.src} alt={about.img.alt} />}
                             <div class="about-text">
+                                {about.title &&
                                 <h3>{about.title}</h3>
-
+                                }
                                 {about.texts.map((text) => (
-                                    <p>{text}</p>
+                                    <p set:html={text}></p>
                                 ))}
                                 {about.list.map((l) => (
                                     <>
+                                        {l.text &&
+                                        <p>{l.text}</p>
+                                        }
                                         {l.listLabel && <strong>{l.listLabel}</strong>}
                                         {l.listItems && (
                                             <ul>
