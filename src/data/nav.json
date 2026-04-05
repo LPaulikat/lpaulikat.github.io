@@ -1,18 +1,14 @@
 [
   {
-    "href": "#about",
+    "href": "/#about",
     "title": "Verein"
   },
   {
-    "href": "#persons",
-    "title": "Über Uns"
-  },
-  {
-    "href": "#teams",
+    "href": "/#teams",
     "title": "Unsere Teams"
   },
   {
-    "href": "#galerie",
+    "href": "/#galerie",
     "title": "Galerie"
   },
   {
@@ -20,7 +16,7 @@
     "title": "Mitgliedschaft"
   },
   {
-    "href": "#contact",
+    "href": "/#contact",
     "title": "Kontakt"
   }
 ]

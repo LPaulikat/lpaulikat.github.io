@@ -4,6 +4,12 @@ import Footer from "../components/Footer.astro";
 import { SEO } from "astro-seo";
 import "glightbox/dist/css/glightbox.min.css";
 import "../styles/main.css";
+
+interface Props {
+    title?: string;
+    imgUrl?: string;
+}
+const { title, imgUrl } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,9 +25,9 @@ import "../styles/main.css";
             description="Rettungshundeverein aus Schleswig-Flensburg – wir trainieren Hunde und Hundeführer für die Suche und Rettung vermisster Menschen."
             openGraph={{
                 basic: {
-                    title: "Rescue Dogs Schleswig-Flensburg e.V.",
+                    title: title ?? "Rescue Dogs Schleswig-Flensburg e.V.",
                     type: "website",
-                    image: "/images/Logo.jpg",
+                    image: imgUrl ?? "/images/Logo.jpg",
                 },
                 optional: {
                     locale: "de_DE",
@@ -42,12 +48,3 @@ import "../styles/main.css";
         </script>
     </body>
 </html>
-
-<style>
-    html,
-    body {
-        margin: 0;
-        width: 100vw;
-        height: 100dwh;
-    }
-</style>
