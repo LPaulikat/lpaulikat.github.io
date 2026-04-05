@@ -1,0 +1,9 @@
+---
+import About from "../components/About.astro";
+import Layout from "../layouts/Layout.astro";
+import education from "../data/education.json";
+---
+
+<Layout title="Ausbildung bei den Rescue Dogs Schleswig-Flensburg e.V.">
+    <About {...education} />
+</Layout>

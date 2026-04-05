@@ -1,0 +1,45 @@
+{
+  "label": "Training",
+  "heading": "Ausbildung und Prüfung",
+  "data": [
+    {
+      "id": "1",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "Unsere Ausbildung nach IGR-Standard",
+      "texts": [
+        "Unsere Ausbildung basiert auf den Richtlinien der Interessengemeinschaft Rettungshunde (IGR).",
+        "Auch die Prüfung erfolgt durch IGR-anerkannte Prüfer unserer Partnerstaffeln:"
+      ],
+      "list": [
+        {
+          "listLabel": "",
+          "listItems": [{ "bold": "", "text": "Rettungshundestaffel-Nord e.V." }]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "Vorraussetung für die Prüfung",
+      "texts": ["Um zur Vor- und Einsatzprüfung zugelassen zu werden, müssen folgende Nachweise vorliegen"],
+      "list": [
+        {
+          "listLabel": "",
+          "listItems": [
+            { "bold": "", "text": "Gültiger Impfnachweis des Hundes" },
+            { "bold": "", "text": "Nachweis einer Haftpflichtversicherung" },
+            { "bold": "", "text": "Erste-Hilfe-Nachweis des Hundeführers, nicht älter als zwei Jahre" },
+            { "bold": "", "text": "Wesenstest des Hundes (vereinsintern)" },
+            { "bold": "", "text": "Teilnahme an einem 10-km-Fitnesstest (vereinsintern)" }
+          ]
+        }
+      ]
+    }
+  ]
+}

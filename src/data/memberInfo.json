@@ -23,6 +23,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "2",
+      "img": {
+        "src": "",
+        "alt": ""
+      },
+      "title": "Trainingsteilnahme",
+      "texts": [
+        "Die regelmäßige Teilnahme am Training ist wichtig fpr eine erfolgreiche Ausbildung. Die konkreten Trainingsorte und Zeiten werden bis spätestens Mittwoch über unsere vereinsinterne WhatsApp-Gruppe Mitgeteilt. Natürlich kann man nicht immer (Urlaub, Arbeit usw.), man sollte sich aber darüber im Klaren sein, dass die Ausbildung zeitintensiv ist.",
+        "Unsere regelmäßigen Trainings finden ganjährig statt."
+      ],
+      "list": [
+        {
+          "listLabel": "Trainingsbetrieb:",
+          "listItems": [
+            { "bold": "Sommer:", "text": "freitags ab 16:00 Uhr bis in die Abendstunden." },
+            { "bold": "Herbst/Winter:", "text": "samstags ab 10:00 Uhr" }
+          ]
+        }
+      ]
     }
   ]
 }

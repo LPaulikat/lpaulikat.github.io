@@ -1,0 +1,38 @@
+{
+  "label": "Anzeige",
+  "heading": "So zeigt ein Hund eine Person an",
+  "data": [
+    {
+      "id": "1",
+      "img": {
+        "src": "../images/2026/03/30.jpg",
+        "alt": ""
+      },
+      "title": "Anzeigeverhalten",
+      "texts": ["Flächensuchhunde erlernen individuell unterschiedliche Anzeigearten."],
+      "list": [
+        {
+          "listLabel": "",
+          "listItems": [
+            {
+              "bold": "Verbeller:",
+              "text": "Bleibt bei der gefundenen Person und bellt, bis der Hundeführer eintrifft."
+            },
+            {
+              "bold": "Bringsler:",
+              "text": "Nimmt ein Bringsel auf und bringt es dem Hundeführer, führt dann zur Person."
+            },
+            {
+              "bold": "Rückverweiser:",
+              "text": "Kehrt sofort zum Hundeführer zurück, springt ihn zur Anzeige an und führt ihn zur Fundstelle."
+            },
+            {
+              "bold": "Freiverweiser:",
+              "text": "Individuelle Anzeigeform, pendelt mehrfach zwischen Fundstelle und Hundeführer, bis dieser die Person erreich hat."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
