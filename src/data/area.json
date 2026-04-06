@@ -19,11 +19,11 @@
           "listLabel": "",
           "text": "",
           "listItems": [
-            { "bold": "", "text": "Demenskranke oder orientierungslose Personen" },
-            { "bold": "", "text": "Menschen mit psychischen Erkrankungen" },
-            { "bold": "", "text": "Suizidgefährdete Personen" },
-            { "bold": "", "text": "Vermisste Kinde" },
-            { "bold": "", "text": "und Unfallopferm, die sich im Schockzustand entfernt haben" }
+            { "bold": "", "text": "demenskranke oder orientierungslose Personen" },
+            { "bold": "", "text": "menschen mit psychischen Erkrankungen" },
+            { "bold": "", "text": "suizidgefährdete Personen" },
+            { "bold": "", "text": "vermisste Kinde" },
+            { "bold": "", "text": "und Unfallopfer, die sich im Schockzustand entfernt haben" }
           ]
         }
       ]

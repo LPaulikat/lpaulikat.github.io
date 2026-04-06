@@ -69,15 +69,15 @@
       "images": [
         {
           "img": {
-            "src": "/images/teams/Tanja-Peet.jpg",
-            "alt": "Das Team Tanja und Peet."
+            "src": "/images/teams/Tanja-Piet.jpg",
+            "alt": "Das Team Tanja und Piet."
           }
         }
       ],
       "badge": "Flächensuche",
-      "name": "Tanja und Peet",
+      "name": "Tanja und Piet",
       "breed": "Border Collie - 5 Jahre",
-      "description": "Tanja und Peet sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
+      "description": "Tanja und Piet sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
     },
     {
       "id": "5",
@@ -127,9 +127,24 @@
       "breed": "Malinois - 6 Jahre",
       "description": "Ulrike und Shiva sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
     },
-
     {
       "id": "8",
+      "role": "",
+      "images": [
+        {
+          "img": {
+            "src": "/images/teams/Axel-Watson.jpg",
+            "alt": "Das Team Axel und Watson."
+          }
+        }
+      ],
+      "badge": "Flächensuche",
+      "name": "Axel und Watson",
+      "breed": "Labrador - 6 Jahre",
+      "description": "Axel und Watson sind seit mehreren Jahren bei den Rescue Dogs sie ein Einsatgeprüftes Team"
+    },
+    {
+      "id": "9",
       "role": "",
       "images": [
         {
@@ -145,7 +160,7 @@
       "description": "Lisa und Cooper sind seit mehreren Jahren bei den Rescue Dogs und seit Januar 2025 sind sie ein Einsatgeprüftes Team"
     },
     {
-      "id": "9",
+      "id": "10",
       "role": "",
       "images": [
         {
@@ -161,7 +176,7 @@
       "description": "Lars und Fox sind seit 1 1/2 Jahren bei den Rescue Dogs das Team hat ende März die Vorprüfung bestanden."
     },
     {
-      "id": "10",
+      "id": "11",
       "role": "",
       "images": [
         {
