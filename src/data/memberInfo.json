@@ -18,9 +18,9 @@
           "listLabel": "Mietgliedsbeitrag:",
           "text": "",
           "listItems": [
-            { "bold": "", "text": " 120 € Jährlich" },
-            { "bold": "", "text": " 60 € Jährlich als Helfer ohne Hund" },
-            { "bold": "", "text": " Bei Eintritt im laufenden Jahr wird Anteilig ab dem Beitrittsmonat berechnet" }
+            { "bold": "", "text": " 120 € jährlich" },
+            { "bold": "", "text": " 60 € jährlich als Helfer ohne Hund" },
+            { "bold": "", "text": " Bei Eintritt im laufenden Jahr wird anteilig ab dem Beitrittsmonat berechnet" }
           ]
         }
       ]
@@ -33,8 +33,8 @@
       },
       "title": "Trainingsteilnahme",
       "texts": [
-        "Die regelmäßige Teilnahme am Training ist wichtig fpr eine erfolgreiche Ausbildung. Die konkreten Trainingsorte und Zeiten werden bis spätestens Mittwoch über unsere vereinsinterne WhatsApp-Gruppe Mitgeteilt. Natürlich kann man nicht immer (Urlaub, Arbeit usw.), man sollte sich aber darüber im Klaren sein, dass die Ausbildung zeitintensiv ist.",
-        "Unsere regelmäßigen Trainings finden ganjährig statt."
+        "Die regelmäßige Teilnahme am Training ist wichtig für eine erfolgreiche Ausbildung. Die konkreten Trainingsorte und Zeiten werden bis spätestens Mittwoch über unsere vereinsinterne WhatsApp-Gruppe mitgeteilt. Natürlich kann man nicht immer (Urlaub, Arbeit usw.), man sollte sich aber darüber im Klaren sein, dass die Ausbildung zeitintensiv ist.",
+        "Unsere regelmäßigen Trainings finden ganzjährig statt."
       ],
       "list": [
         {

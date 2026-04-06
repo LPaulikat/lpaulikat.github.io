@@ -13,6 +13,8 @@ import teamData from "../data/teams.json";
 import galleryData from "../data/gallery.json";
 import heroData from "../data/hero.json";
 import imageData from "../data/image.json";
+import donationData from "../data/donation.json";
+import Donation from "../components/Donation.astro";
 ---
 
 <Layout>
@@ -20,6 +22,7 @@ import imageData from "../data/image.json";
     <About {...aboutData} />
     <Image images={imageData} />
     <About {...areaData} />
+    <Donation {...donationData} />
     <Teams {...teamData} />
     <About {...indicatorData} />
     <Gallery {...galleryData} />

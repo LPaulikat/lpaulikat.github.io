@@ -1,0 +1,108 @@
+---
+interface Props {
+    goal: string;
+    current: number;
+    target: number;
+    text: string;
+    paypalUrl: string;
+}
+const { goal, current, target, text, paypalUrl } = Astro.props;
+const percent = Math.round((current / target) * 100);
+---
+
+<section class="section-dark">
+    <div class="container">
+        <div class="donation-banner">
+            <div class="donation-top">
+                <span class="badge">Aktuelles Spendenziel</span>
+                <p class="goal-text">Wir sammeln aktuell für: <strong>{goal}</strong></p>
+            </div>
+            <div class="progress-wrap">
+                <div class="progress-labels">
+                    <span>{current} € gesammelt</span>
+                    <span>Ziel: {target} €</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style={`width: ${percent}%`}></div>
+                </div>
+            </div>
+            <div class="donation-bottom">
+                <p class="donation-text">{text}</p>
+                <a href={paypalUrl} target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    Jetzt spenden
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .donation-banner {
+        border: 1px solid var(--red-dark);
+        border-radius: 12px;
+        padding: 1.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .donation-top {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .badge {
+        background: var(--red-dark);
+        color: var(--white);
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+    .goal-text {
+        color: #aaa;
+        font-size: 14px;
+        margin: 0;
+        strong {
+            color: var(--white);
+        }
+    }
+    .progress-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .progress-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: #aaa;
+    }
+    .progress-bar {
+        background: #333;
+        border-radius: 99px;
+        height: 8px;
+        overflow: hidden;
+    }
+    .progress-fill {
+        background: var(--red-dark);
+        height: 100%;
+        border-radius: 99px;
+        transition: width 1s ease;
+    }
+    .donation-bottom {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .donation-text {
+        color: #aaa;
+        font-size: 14px;
+        margin: 0;
+        flex: 1;
+        min-width: 200px;
+    }
+</style>

@@ -11,7 +11,7 @@
       "title": "Was ist ein Flächensuchhund?",
       "texts": [
         "Flächensuchhunde sind speziell ausgebildete Hunde, die weitläufige Gebiete wie Wälder, Wiesen, Firmen- und Industriegelände nach menschlichen Witterungen absuchen.",
-        "Im gegensatz zu Mantrailern arbeiten Flächensuchhunde nicht mit einem individuellen Geruch, sondern zeigen jede menschliche Person im Suchgebiet ein.",
+        "Im gegensatz zu Mantrailern arbeiten Flächensuchhunde nicht mit einem individuellen Geruch, sondern zeigen jede menschliche Person im Suchgebiet an.",
         "Bei den vermissten Personen handelt es sich meist um"
       ],
       "list": [
@@ -20,7 +20,7 @@
           "text": "",
           "listItems": [
             { "bold": "", "text": "demenskranke oder orientierungslose Personen" },
-            { "bold": "", "text": "menschen mit psychischen Erkrankungen" },
+            { "bold": "", "text": "Menschen mit psychischen Erkrankungen" },
             { "bold": "", "text": "suizidgefährdete Personen" },
             { "bold": "", "text": "vermisste Kinde" },
             { "bold": "", "text": "und Unfallopfer, die sich im Schockzustand entfernt haben" }
