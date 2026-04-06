@@ -38,8 +38,8 @@ const percent = Math.round((current / target) * 100);
 
 <style>
     .donation-banner {
-        border: 1px solid var(--red-dark);
-        border-radius: 12px;
+        border: 3px solid var(--red-dark);
+        border-radius: 15px;
         padding: 1.5rem 2rem;
         display: flex;
         flex-direction: column;
@@ -54,16 +54,12 @@ const percent = Math.round((current / target) * 100);
     .badge {
         background: var(--red-dark);
         color: var(--white);
-        font-size: 11px;
-        letter-spacing: 2px;
         text-transform: uppercase;
-        padding: 4px 12px;
+        padding: 0.5rem 1rem;
         font-weight: 500;
         white-space: nowrap;
     }
     .goal-text {
-        color: #aaa;
-        font-size: 14px;
         margin: 0;
         strong {
             color: var(--white);
@@ -77,13 +73,11 @@ const percent = Math.round((current / target) * 100);
     .progress-labels {
         display: flex;
         justify-content: space-between;
-        font-size: 13px;
-        color: #aaa;
     }
     .progress-bar {
-        background: #333;
+        background: var(--dark-gray);
         border-radius: 99px;
-        height: 8px;
+        height: 0.5rem;
         overflow: hidden;
     }
     .progress-fill {
@@ -99,8 +93,6 @@ const percent = Math.round((current / target) * 100);
         flex-wrap: wrap;
     }
     .donation-text {
-        color: #aaa;
-        font-size: 14px;
         margin: 0;
         flex: 1;
         min-width: 200px;
