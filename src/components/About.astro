@@ -1,5 +1,4 @@
 ---
-import { Picture } from 'astro:assets';
 
 interface Props {
     label: string;
@@ -12,10 +11,11 @@ interface Props {
         };
         title: string;
         texts: string[];
-        list: {
+        list?: {
             listLabel: string;
             text:string;
             listItems: {
+              hover?:string;
                 bold: string;
                 text: string;
             }[];
@@ -23,6 +23,9 @@ interface Props {
     }[];
 }
 const { data, label, heading } = Astro.props;
+
+
+
 ---
 
 <section id="about" class="section-gray">
@@ -43,7 +46,7 @@ const { data, label, heading } = Astro.props;
                                 {about.texts.map((text) => (
                                     <p set:html={text}></p>
                                 ))}
-                                {about.list.map((l) => (
+                                {about.list?.map((l) => (
                                     <>
                                         {l.text &&
                                         <p>{l.text}</p>
@@ -52,7 +55,7 @@ const { data, label, heading } = Astro.props;
                                         {l.listItems && (
                                             <ul>
                                                 {l.listItems.map((item) => (
-                                                    <li>
+                                                    <li data-hover={item.hover} >
                                                         <div class="list-item">
                                                             {item.bold && <strong>{item.bold}</strong>}
                                                           <p>{item.text}</p>
@@ -108,7 +111,9 @@ const { data, label, heading } = Astro.props;
                 @media (width > 1024px) {
                     max-width: 75%;
                 }
-
+                li{
+                    cursor: pointer;
+                }
                 .list-item{
                     display: flex;
                     align-items: flex-start;
@@ -122,3 +127,35 @@ const { data, label, heading } = Astro.props;
         }
     }
 </style>
+<script>
+const hoverItems = document.querySelectorAll('[data-hover]');
+hoverItems.forEach((item) => {
+  let originalSrc = ''
+
+  item.addEventListener('mouseenter', () => {
+    const hoverImgUrl = item.getAttribute('data-hover') || '';
+    const content = item.closest('.about-content');
+    let img = content?.querySelector('.about-img');
+
+
+    if (img) {
+     originalSrc = img.getAttribute('src')??"";
+    }else{
+      img = document.createElement('img');
+      img.className = 'about-img';
+      content?.classList.add('hasImg');
+      content?.insertAdjacentElement('afterbegin', img);
+    }
+    img.setAttribute('src', hoverImgUrl);
+  });
+
+  item.addEventListener('mouseleave', () => {
+    const img = item.closest('.about-content')?.querySelector('.about-img');
+    if (!img) return;
+
+    img.setAttribute('src',originalSrc)
+  });
+});
+
+
+</script>

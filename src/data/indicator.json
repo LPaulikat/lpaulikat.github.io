@@ -5,7 +5,7 @@
     {
       "id": "1",
       "img": {
-        "src": "../images/2026/03/30.jpg",
+        "src": "",
         "alt": ""
       },
       "title": "Anzeigeverhalten",
@@ -16,18 +16,25 @@
           "text": "",
           "listItems": [
             {
+              "hover": "",
               "bold": "Verbeller:",
               "text": "Bleibt bei der gefundenen Person und bellt, bis der Hundeführer eintrifft."
             },
             {
+              "hover": "",
+
               "bold": "Bringsler:",
               "text": "Nimmt ein Bringsel auf und bringt es dem Hundeführer, führt dann zur Person."
             },
             {
+              "hover": "",
+
               "bold": "Rückverweiser:",
               "text": "Kehrt sofort zum Hundeführer zurück, springt ihn zur Anzeige an und führt ihn zur Fundstelle."
             },
             {
+              "hover": "../images/2026/03/30.jpg",
+
               "bold": "Freiverweiser:",
               "text": "Individuelle Anzeigeform, pendelt mehrfach zwischen Fundstelle und Hundeführer, bis dieser die Person erreich hat."
             }
